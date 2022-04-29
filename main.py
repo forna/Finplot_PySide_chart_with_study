@@ -120,8 +120,8 @@ class FinplotWidget(QWidget):
         # Show the grid
         self.fplt_main.set_visible(xgrid=True, ygrid=True)
         self.layout.addLayout(self.labels)
-        self.layout.addWidget(self.fplt_main.ax_widget)
-        self.layout.addWidget(self.fplt_study.ax_widget)
+        self.layout.addWidget(self.fplt_main.ax_widget, stretch=3)
+        self.layout.addWidget(self.fplt_study.ax_widget, stretch=1)
         self.window().axs = self.fplt_main, self.fplt_study  # required property of window
         self.setLayout(self.layout)
         self.load_df(symbol, df)
